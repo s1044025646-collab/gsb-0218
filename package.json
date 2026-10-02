@@ -1,0 +1,26 @@
+{
+  "name": "ean13-lab",
+  "version": "1.0.0",
+  "description": "本地 EAN-13 商品条码编码与扫描校验实验服务（仅 API 与 CLI）",
+  "type": "module",
+  "main": "dist/server.js",
+  "bin": {
+    "ean13": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node --experimental-sqlite dist/server.js",
+    "dev": "node --experimental-sqlite --import tsx src/server.ts",
+    "cli": "node --experimental-sqlite --import tsx src/cli.ts",
+    "demo": "node --experimental-sqlite --import tsx scripts/demo.ts",
+    "test": "node --experimental-sqlite --import tsx --test tests/*.test.ts"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "@types/node": "^22.10.0"
+  }
+}
