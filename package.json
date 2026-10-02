@@ -1,0 +1,19 @@
+{
+  "name": "ean13-lab",
+  "version": "1.0.0",
+  "private": true,
+  "description": "本地 EAN-13 条码编码与扫描校验实验服务（API + CLI）",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "test": "tsx --test test/ean13.test.ts",
+    "start": "npm run build && node dist/server.js",
+    "cli": "npm run build --silent && node dist/cli.js",
+    "demo": "npm run build --silent && node dist/cli.js demo"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  }
+}
